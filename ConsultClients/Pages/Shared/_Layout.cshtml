@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ConsultClients</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="preload">
+    <header class="header topnav">
+        <button class="header__button" id="btnNav" type="button">
+            <i class="material-icons">menu</i>
+        </button>
+        <div class="middle">
+
+        </div>
+        <a href="#" class="notification">
+            <span class="material-icons">notifications</span>
+            <span class="badge">3</span>
+        </a>
+        <a href="#">Créer un compte</a>
+        <a href="#">Se connecter</a>
+    </header>
+    <nav class="nav">
+        <div class="nav__links">
+            <a href="#" class="nav__link">
+                <i class="material-icons">dashboard</i>
+                Dashboard
+            </a>
+            <a class="nav__link nav__link--active" href="#">
+                <i class="material-icons">source</i>
+                Projects
+            </a>
+            <a class="nav__link" href="#">
+                <i class="material-icons">lock</i>
+                Security
+            </a>
+            <a class="nav__link" href="#">
+                <i class="material-icons">history</i>
+                History
+            </a>
+            <a class="nav__link" href="#">
+                <i class="material-icons">person</i>
+                Profile
+            </a>
+        </div>
+        <div class="nav__overlay"></div>
+    </nav>
+    <main>
+        @RenderBody()
+    </main>
+
+    <script src="~/js/style.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
